@@ -25,7 +25,7 @@
                                     @foreach($stars as $star)
                                         <div>
                                             <div>
-                                                <h2 style="margin-left: 15px; margin-top: -30px;">Profile browser</h2>
+                                                <h2 style="margin-left: 15px; margin-top: -15px;">Profile browser</h2>
                                                 <br>
                                                 <br>
                                                 <div>
