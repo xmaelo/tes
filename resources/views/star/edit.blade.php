@@ -4,26 +4,48 @@
 
 
 @section('content')
-<div class="rt-container">
-    
-    <div class="col-rt-12">
-        <img src="{{url('storage/'.$star->image)}}" alt="" width="300" height="300">
-        <div class="Scriptcontent">
-            <form method="POST" action="{{ url('star/'. $star->id.'/edit') }}">
-                {{ csrf_field() }}
-                {{ method_field('PATCH') }}
-                <input type="text" required name="nom"  value="{{$star->nom}}" placeholder="nom" id="nom">
-                <br>
-                <input type="text" required name="prenom" value="{{$star->prenom}}" placeholder="prenom" id="prenom">
-                <br>
-                <textarea type="text" required name="description"  placeholder="description" id="description"> {{$star->description}} </textarea>
-                <input type="file" name="image" id="image" >
+<div>
+    <br>
+    <br>
+    <br>
+    <section>
+        <div class="rt-container">
+            <div class="col-rt-12 card">
+                <div class="Scriptcontent" style="display: flex;">
 
-                <input type="submit" value="mettre a jour">
-            </form>
+            
+
+                    
+                    <form method="POST" action="{{ url('star/'. $star->id.'/edit') }}" style="width: 50%;">
+                        {{ csrf_field() }}
+                        {{ method_field('PATCH') }}
+                        <label for="nom">Nom:</label><br>
+                        <input type="text" required name="nom" class="input2" value="{{$star->nom}}" id="nom">
+                        <br>
+                        <label for="prenom">Prenom:</label><br>
+                        <input type="text" required name="prenom" class="input2" value="{{$star->prenom}}" placeholder="prenom" id="prenom">
+                        <br>
+                        <label for="description">Description:</label><br>
+                        <textarea class="textarea2" type="text" required name="description"  placeholder="description" id="description"> {{$star->description}} </textarea>
+                        
+                        <br>
+                        <label for="image">Photo:</label><br>
+                        <input type="file" name="image" id="image" >
+
+                        <br>
+                        <br>
+                        <br>
+                        <input type="submit" value="mettre a jour" style="background-color: antiquewhite; border-radius: 20px; width: 150px; height: 30px;">
+
+                    </form>
+
+
+                    <img src="{{url('storage/'.$star->image)}}" alt="" width="300" height="300">
+              
+            </div>
         </div>
     </div>
-
+</section>
 </div>
 @endsection
 @section('javascript')

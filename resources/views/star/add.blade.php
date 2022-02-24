@@ -2,25 +2,38 @@
 
 @section('title', 'Ajout')
 
-
 @section('content')
-<div class="rt-container">
-    <div class="col-rt-12">
-        <div class="Scriptcontent">
-            <form action="/star/store" method="POST" class="form">
-                @csrf
-                <input type="text" required name="nom" placeholder="nom" id="nom">
-                <br>
-                <input type="text" required name="prenom" placeholder="prenom" id="prenom">
-                <br>
-                <textarea type="text" required name="description" placeholder="description" id="description"> </textarea>
-                <input type="file" required name="image" id="image">
-
-                <input type="submit" value="soumettre">
-            </form>
+<div>
+        <br>
+        <br>
+        <br>
+    <section>
+        <div class="rt-container">
+            <div class="col-rt-12 card">
+                <div class="Scriptcontent">
+                    <form action="/star/store" method="POST" class="form">
+                        @csrf
+                        <label for="nom">Nom:</label><br>
+                        <input type="text" required name="nom" id="nom" class="input"><br>
+                        <label for="prenom">Prenom:</label><br>
+                        <input type="text" required name="prenom" id="prenom" class="input">
+                        <br>
+                        <label for="description">Description:</label><br>
+                        <textarea type="text" required name="description" placeholder="description" id="description"> </textarea>
+                        <br>
+                        <label for="image">Photo:</label><br>
+                        
+                        <input type="file" required name="image" id="image">
+                        <br>
+                        <br>
+                        <br>
+                        <input type="submit" value="soumettre" style="background-color: antiquewhite; border-radius: 20px; width: 150px; height: 30px;">
+                    </form>
+                </div>
+            </div>
         </div>
-        </div>
-        </div>
+    </section>
+</div>
 @endsection
 @section('javascript')
     <script>

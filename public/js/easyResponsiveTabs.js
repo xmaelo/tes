@@ -11,7 +11,7 @@
                 closed: false,
                 tabidentify: '',
                 activetab_bg: 'white',
-                inactive_bg: '#F5F5F5',
+                inactive_bg: '#D5D5D5',
                 active_border_color: '#c1c1c1',
                 active_content_border_color: '#c1c1c1',
                 activate: function () {
@@ -42,7 +42,6 @@
                 });
 
                 if (options.type == 'vertical')
-                    $respTabsList.css('margin-top', '3px');
 
                 $respTabs.find('.resp-tabs-container.' + options.tabidentify).css('border-color', options.active_content_border_color);
                 $respTabs.find('.resp-tabs-container.' + options.tabidentify + ' > div').addClass('resp-tab-content').addClass(options.tabidentify);

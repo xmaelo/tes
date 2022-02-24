@@ -10,7 +10,7 @@
         <script src="{{ URL::asset('js/easyResponsiveTabs.js') }}"></script>
     </head>
     <body>
-        <div class="container">
+        <div>
             @yield('content')
         </div>
 
